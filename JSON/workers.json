@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Vasily Andreevich",
+    "birthday": "1993-07-05",
+    "level": "JUNIOR",
+    "salary": 770
+  },
+  {
+    "name": "Piotr Grigorovich",
+    "birthday": "1969-02-12",
+    "level": "JUNIOR",
+    "salary": 800
+  },
+  {
+    "name": "Aleksiy Semenovich",
+    "birthday": "1963-11-02",
+    "level": "JUNIOR",
+    "salary": 850
+  },
+  {
+    "name": "Masha",
+    "birthday": "2001-12-03",
+    "level": "TRAINEE",
+    "salary": 300
+  },
+  {
+    "name": "Petya",
+    "birthday": "1992-07-05",
+    "level": "TRAINEE",
+    "salary": 150
+  },
+  {
+    "name": "Sasha",
+    "birthday": "2001-12-03",
+    "level": "TRAINEE",
+    "salary": 270
+  },
+  {
+    "name": "Valerii Petrovich",
+    "birthday": "2000-02-29", "level": "TRAINEE",
+    "salary": 350
+  },
+  {
+    "name": "Simon Vasilyovich ",
+    "birthday": "1979-05-22",
+    "level": "MIDDLE",
+    "salary": 1400
+  },
+  {
+    "name": "Stepan Andriyovich",
+    "birthday": "1909-01-01",
+    "level": "MIDDLE",
+    "salary": 1450
+  },
+  {
+    "name": "Mihaylo Sergiyovich",
+    "birthday": "1966-09-17",
+    "level": "MIDDLE",
+    "salary": 1860
+  },
+  {
+    "name": "Taras Grigorovuich",
+    "birthday": "1914-03-09",
+    "level": "SENIOR",
+    "salary": 2200
+  },
+  {
+    "name": "Volodimir Oleksandrovich",
+    "birthday": "1978-01-25",
+    "level": "SENIOR",
+    "salary": 2200
+  }
+]

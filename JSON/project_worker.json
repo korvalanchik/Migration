@@ -1,0 +1,206 @@
+[
+   {
+     "projectId": 1,
+     "workerId": 9
+   },
+   {
+      "projectId": 2,
+      "workerId": 6
+   },
+   {
+      "projectId": 2,
+      "workerId": 7
+   },
+   {
+      "projectId": 2,
+      "workerId": 10
+   },
+   {
+      "projectId": 3,
+      "workerId": 7
+   },
+   {
+      "projectId": 4,
+      "workerId": 4
+   },
+   {
+      "projectId": 4,
+      "workerId": 5
+   },
+   {
+      "projectId": 4,
+      "workerId": 8
+   },
+   {
+      "projectId": 4,
+      "workerId": 12
+   },
+   {
+      "projectId": 5,
+      "workerId": 1
+   },
+   {
+      "projectId": 5,
+      "workerId": 3
+   },
+   {
+      "projectId": 5,
+      "workerId": 9
+   },
+   {
+      "projectId": 6,
+      "workerId": 4
+   },
+   {
+      "projectId": 6,
+      "workerId": 5
+   },
+   {
+      "projectId": 6,
+      "workerId": 10
+   },
+   {
+      "projectId": 7,
+      "workerId": 6
+   },
+   {
+      "projectId": 8,
+      "workerId": 2
+   },
+   {
+      "projectId": 8,
+      "workerId": 3
+   },
+   {
+      "projectId": 8,
+      "workerId": 8
+   },
+   {
+      "projectId": 8,
+      "workerId": 12
+   },
+   {
+      "projectId": 9,
+      "workerId": 5
+   },
+   {
+      "projectId": 9,
+      "workerId": 7
+   },
+   {
+      "projectId": 9,
+      "workerId": 8
+   },
+   {
+      "projectId": 9,
+      "workerId": 10
+   },
+   {
+      "projectId": 9,
+      "workerId": 12
+   },
+   {
+      "projectId": 10,
+      "workerId": 2
+   },
+   {
+      "projectId": 10,
+      "workerId": 3
+   },
+   {
+      "projectId": 10,
+      "workerId": 11
+   },
+   {
+      "projectId": 10,
+      "workerId": 4
+   },
+   {
+      "projectId": 11,
+      "workerId": 6
+   },
+   {
+      "projectId": 11,
+      "workerId": 7
+   },
+   {
+      "projectId": 11,
+      "workerId": 9
+   },
+   {
+      "projectId": 12,
+      "workerId": 1
+   },
+   {
+      "projectId": 12,
+      "workerId": 2
+   },
+   {
+      "projectId": 12,
+      "workerId": 4
+   },
+   {
+      "projectId": 13,
+      "workerId": 9
+   },
+   {
+      "projectId": 13,
+      "workerId": 10
+   },
+   {
+      "projectId": 14,
+      "workerId": 8
+   },
+   {
+      "projectId": 14,
+      "workerId": 6
+   },
+   {
+      "projectId": 14,
+      "workerId": 11
+   },
+   {
+      "projectId": 14,
+      "workerId": 12
+   },
+   {
+      "projectId": 15,
+      "workerId": 1
+   },
+   {
+      "projectId": 15,
+      "workerId": 4
+   },
+   {
+      "projectId": 15,
+      "workerId": 11
+   },
+   {
+      "projectId": 16,
+      "workerId": 5
+   },
+   {
+      "projectId": 16,
+      "workerId": 10
+   },
+   {
+      "projectId": 17,
+      "workerId": 2
+   },
+   {
+      "projectId": 17,
+      "workerId": 4
+   },
+   {
+      "projectId": 17,
+      "workerId": 6
+   },
+   {
+      "projectId": 17,
+      "workerId": 8
+   },
+   {
+      "projectId": 17,
+      "workerId": 12
+   }
+]
