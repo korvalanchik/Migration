@@ -1,6 +1,6 @@
 package com.migration.dao;
 
-import com.migration.emptity.Worker;
+import com.migration.entity.Worker;
 import com.migration.storage.Storage;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

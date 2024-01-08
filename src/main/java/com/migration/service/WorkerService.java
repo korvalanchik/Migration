@@ -1,6 +1,6 @@
 package com.migration.service;
 
-import com.migration.emptity.Worker;
+import com.migration.entity.Worker;
 import com.migration.prefs.Prefs;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

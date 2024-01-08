@@ -1,24 +1,28 @@
 package com.migration.test;
 
+import com.migration.service.ClientService;
 import com.migration.storage.DatabaseInitService;
 import com.migration.storage.Storage;
 import lombok.SneakyThrows;
 
-import java.util.List;
-
 public class App {
     @SneakyThrows
     public static void main(String[] args){
+        String st;
+        long id;
         Storage storage = Storage.getInstance();
         new DatabaseInitService().initDb();
-//        List<Worker> workers = new WorkerService().receiveWorker();
-//        WorkerDao.save(workers);
-//        List<Client> clients = new ClientService().receiveClient();
-//        ClientDao.save(clients);
-//        List<Project> projects = new ProjectService().receiveProject();
-//        ProjectDao.save(projects);
-//        List<ProjectWorker> projectWorkers = new ProjectWorkerService().receiveProjectWorker();
-//        ProjectWorkerDao.save(projectWorkers);
+        ClientService clientService = new ClientService();
+        st = "Innocent";
+        id = clientService.create(st);
+        System.out.println("Created new client " + st + " with Id = " + id);
+        st = "Violina";
+        id = clientService.create(st);
+        System.out.println("Created new client " + st + " with Id = " + id);
+        System.out.println(clientService.getById(4L));
+        System.out.println(clientService.getById(125L));
+
+
         if(!storage.getConnection().isClosed()) {
             storage.getConnection().close();
         }
