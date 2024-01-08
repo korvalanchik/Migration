@@ -1,11 +1,5 @@
 {
   "dbUrl": "jdbc:h2:./test",
   "userName": "valerii",
-  "password": "",
-  "initDbSql": "./SQL/init_db.sql",
-  "populateDb": "./SQL/populate_db.sql",
-  "clientsList": "./JSON/clients.json",
-  "workersList": "./JSON/workers.json",
-  "projectsList": "./JSON/projects.json",
-  "projectWorkerList": "./JSON/project_worker.json"
+  "password": ""
 }

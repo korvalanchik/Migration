@@ -19,8 +19,11 @@ public class App {
         st = "Violina";
         id = clientService.create(st);
         System.out.println("Created new client " + st + " with Id = " + id);
-        System.out.println(clientService.getById(4L));
-        System.out.println(clientService.getById(125L));
+        System.out.println(clientService.getById(3L));
+        clientService.setName(3L, "Sirozha");
+        System.out.println(clientService.getById(3L));
+        clientService.deleteById(3L);
+        System.out.println(clientService.listAll().toString());
 
 
         if(!storage.getConnection().isClosed()) {

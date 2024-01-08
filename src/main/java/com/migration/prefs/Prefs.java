@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class Prefs {
     public static final String DB_JDBC_CONNECTION_URL = "dbUrl";
-    public static final String INIT_DB_SQL_FILE_PATH = "initDbSql";
     public static final String DB_USERNAME = "userName";
     public static final String DB_PASSWORD = "password";
     public static final String DEFAULT_PREFS_FILENAME = "prefs.json";
@@ -25,7 +24,8 @@ public class Prefs {
             ObjectMapper objectMapper = new ObjectMapper();
             String json = String.join("\n", Files.readAllLines(Paths.get(filename)));
 
-            TypeReference<Map<String, Object>> mapType = new TypeReference<Map<String, Object>>() {};
+            TypeReference<Map<String, Object>> mapType = new TypeReference<>() {
+            };
             prefsMap = objectMapper.readValue(json, mapType);
 
         } catch(IOException e) {

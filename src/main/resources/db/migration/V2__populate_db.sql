@@ -1,10 +1,10 @@
 INSERT INTO client ( `NAME` )
 VALUES
     ( 'Kolya' ),
-    ( 'Sirozha' ),
+    ( 'Michael J.' ),
     ( 'Vasya' ),
     ( 'Kolya S.' ),
-    ( 'Sirozha' ),
+    ( 'John T.' ),
     ( 'Vasya P.' ),
     ( 'Dima' ),
     ( 'Grisha' ),

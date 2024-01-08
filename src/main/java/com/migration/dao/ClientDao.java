@@ -7,25 +7,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-/*
-String getById(long id) - повертає назву клієнта з ідентифікатором id
-void setName(long id, String name) - встановлює нове ім'я name для клієнта з ідентифікатором id
-void deleteById(long id) - видаляє клієнта з ідентифікатором id
-List<Client> listAll() - повертає всіх клієнтів з БД у вигляді колекції об'єктів типу Client (цей клас створи сам, у ньому має бути 2 поля - id та name)
 
- */
-
-//@NoArgsConstructor(access= AccessLevel.PRIVATE)
 public class ClientDao {
-    private final Connection connection = Storage.getInstance().getConnection();
     private final PreparedStatement createSt;
     private final PreparedStatement getByIdSt;
-    private PreparedStatement setNameSt;
-    private PreparedStatement listAllSt;
-    private PreparedStatement deleteByIdSt;
+    private final PreparedStatement setNameSt;
+    private final PreparedStatement listAllSt;
+    private final PreparedStatement deleteByIdSt;
 
     public ClientDao() throws SQLException {
+        Connection connection = Storage.getInstance().getConnection();
         createSt = connection.prepareStatement(
                         "INSERT INTO client (`NAME`) VALUES (?)", new String[] {"ID"});
         getByIdSt = connection.prepareStatement("SELECT name FROM client WHERE id = ?");
@@ -34,21 +28,6 @@ public class ClientDao {
         deleteByIdSt = connection.prepareStatement("DELETE FROM client WHERE id = ?");
     }
 
-    public void save(List<Client> client) {
-        try {
-            PreparedStatement preparedStatement = createSt;
-            connection.setAutoCommit(false);
-            for(Client cl: client) {
-                populatePreparedStatement(cl, preparedStatement);
-                preparedStatement.addBatch();
-            }
-            preparedStatement.executeBatch();
-            connection.commit();
-            connection.setAutoCommit(true);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
     public long saveClient(Client client) {
         try {
             PreparedStatement preparedStatement = createSt;
@@ -61,13 +40,12 @@ public class ClientDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return 0;
+        return 0L;
     }
     public String selectById(long id) {
         try {
             PreparedStatement preparedStatement = getByIdSt;
             preparedStatement.setLong(1, id);
-            preparedStatement.execute();
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()) {
                 return rs.getString("name");
@@ -76,6 +54,55 @@ public class ClientDao {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public Boolean saveName(long id, String name) {
+        try {
+            PreparedStatement preparedStatement = setNameSt;
+            preparedStatement.setString(1, name);
+            preparedStatement.setLong(2, id);
+            int res = preparedStatement.executeUpdate();
+            if(res > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public Boolean removeById(long id) {
+        try {
+            PreparedStatement preparedStatement = deleteByIdSt;
+            preparedStatement.setLong(1, id);
+            int res = preparedStatement.executeUpdate();
+            if(res > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public List<Client> selectAll() {
+        List<Client> clients = new ArrayList<>();
+        try {
+            ResultSet rs = listAllSt.executeQuery();
+            while (rs.next()) {
+                Client client = new Client();
+                client.setId(rs.getLong("id"));
+                String name = rs.getString("name");
+                if(name.length() < 3 || name.length() > 30) {
+                    return Collections.emptyList();
+                }
+                client.setName(name);
+                clients.add(client);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return clients;
 
     }
     private void populatePreparedStatement(Client client, PreparedStatement preparedStatement) throws SQLException {
